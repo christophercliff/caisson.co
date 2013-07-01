@@ -1,0 +1,20 @@
+{
+  "output": "./build",
+  "locals": {
+    "url": "http://caisson.co",
+    "name": "Caisson",
+    "mode": "development",
+    "assets": {
+      "css": {
+        "all": [
+          "/assets/css/*"
+        ]
+      },
+      "js": {},
+      "jst": {}
+    }
+  },
+  "plugins": [
+    "./node_modules/wintersmith-kelvin/"
+  ]
+}

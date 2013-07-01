@@ -1,0 +1,8 @@
+{
+  "name": "caisson.co",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "wintersmith-kelvin": "0.0.6"
+  }
+}

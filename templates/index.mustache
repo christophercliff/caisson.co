@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        {{& assets.css.all }}
+    </head>
+    <body>
+        <article>{{& page.html }}</article>
+        <ul>
+            <li>
+                <a href="https://github.com/christophercliff/caisson">Source</a>
+            </li>
+            <li>
+                <a href="https://github.com/christophercliff/caisson/issues">Issues</a>
+            </li>
+        </ul>
+        <footer>A project by <a href="https://twitter.com/ctcliff">@ctcliff</a></footer>
+    </body>
+</html>
