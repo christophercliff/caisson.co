@@ -1,38 +1,112 @@
-            @font-face {
-                font-family: 'strangelove';
-                src: url('fonts/strangelove-text.eot');
-                src: url('fonts/strangelove-text.eot?#iefix') format('embedded-opentype'),
-                    url('fonts/strangelove-text.woff') format('woff'),
-                    url('fonts/strangelove-text.ttf') format('truetype'),
-                    url('fonts/strangelove-text.svg#ywftsvg') format('svg');
-                font-weight: normal;
-                font-style: normal;
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+@dimBase: 24px;
+
+@colorMain: #507d9d;
+@colorBackground: #f3F3eb;
+@colorBackgroundHighlight: #fff;
+
+@fontFamilyHeader: 'Strangelove', 'Helvetica', 'Arial', 'sans-serif';
+@fontFamilyParagraph: 'Source Sans Pro', 'Helvetica', 'Arial', 'sans-serif';
+@fontFamilyCode: 'Courier', 'mono', 'serif';
+
+.fontHeader {
+    font-family: @fontFamilyHeader;
+    font-size: 36px;
+    letter-spacing: 0.10em;
+    line-height: @dimBase;
+    text-transform: uppercase;
+}
+.fontParagraph {
+    font-family: @fontFamilyParagraph;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: @dimBase;
+}
+.fontCode {
+    font-family: @fontFamilyCode;
+    font-size: 14px;
+    line-height: @dimBase;
+}
+.fontFooter {
+    font-family: @fontFamilyParagraph;
+    font-size: 18px;
+    line-height: @dimBase;
+    text-align: center;
+}
+.fontList {
+    font-family: @fontFamilyParagraph;
+    font-size: 12px;
+    letter-spacing: 0.20em;
+    line-height: @dimBase;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: 'Strangelove';
+    src: url('/assets/fonts/strangelove-text.eot');
+    src: url('/assets/fonts/strangelove-text.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/strangelove-text.woff') format('woff'),
+        url('/assets/fonts/strangelove-text.ttf') format('truetype'),
+        url('/assets/fonts/strangelove-text.svg#ywftsvg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    padding: @dimBase*8.00 0;
+    color: @colorMain;
+    background-color: @colorBackground;
+    font-family: @fontFamilyParagraph;
+}
+    article {
+        width: 470px;
+        margin: 0 auto;
+
+        h1 {
+            @width: 470px;
+            @height: 95px;
+            width: @width; height: 0; overflow: hidden;
+            padding-top: @height; margin: 0 auto;
+            background: url('/assets/images/logo.png') no-repeat;
+            background-size: @width @height;
+        }
+        h2 {
+            .fontHeader();
+            margin: @dimBase*2.50 0 @dimBase;
+        }
+        p,
+        p code {
+            .fontParagraph();
+            margin-bottom: @dimBase;
+        }
+        pre code {
+            .fontCode();
+            display: block;
+            padding: @dimBase; margin-bottom: @dimBase;
+            background: @colorBackgroundHighlight;
+            border: solid 1px @colorMain;
+        }
+    }
+    ul {
+        position: absolute; left: @dimBase; top: @dimBase;
+        font-size: 0;
+        li {
+            display: inline;
+            a {
+                .fontList();
+                display: inline-block;
+                margin-right: @dimBase*0.50;
             }
-            body {
-                padding: 0; margin: 0;
-                color: #507d9d;
-                background-color: #f3F3eb;
-                text-align: center;
-            }
-                section {
-                    position: absolute; left: 0; top: 50%;
-                    width: 100%;
-                    margin-top: -80px;
-                }
-                    h1 {
-                        padding: 0; margin: 0 0 22px;
-                        font-family: 'strangelove', 'helvetica';
-                        font-size: 72px; line-height: 72px; font-weight: normal; text-transform: uppercase;
-                    }
-                    p {
-                        padding: 0; margin: 0;
-                        font-family: 'courier';
-                        font-size: 14px; line-height: 22px;
-                    }
-                    a {
-                        color: #507d9d;
-                        font-weight: bold; text-decoration: none;
-                    }
-                    a:hover {
-                        text-decoration: underline;
-                    }
+        }
+    }
+    footer {
+        .fontFooter();
+        margin-top: @dimBase*4.00;
+    }
+    a {
+        color: @colorMain;
+        font-weight: 600; text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
