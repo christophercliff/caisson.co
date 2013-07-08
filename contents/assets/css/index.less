@@ -53,7 +53,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     font-style: normal;
 }
 body {
-    padding: @dimBase*8.00 0;
+    padding: @dimBase*8.00 0 @dimBase*6.00;
     color: @colorMain;
     background-color: @colorBackground;
     font-family: @fontFamilyParagraph;
@@ -72,19 +72,23 @@ body {
         }
         h2 {
             .fontHeader();
-            margin: @dimBase*2.50 0 @dimBase;
+            margin: @dimBase*3.00 0 @dimBase;
         }
-        p,
-        p code {
+        p {
             .fontParagraph();
             margin-bottom: @dimBase;
         }
-        pre code {
+        p code {
+            .fontParagraph();
+            font-style: italic;
+        }
+        pre {
             .fontCode();
             display: block;
+            width: 100%;
             padding: @dimBase; margin-bottom: @dimBase;
-            background: @colorBackgroundHighlight;
-            border: solid 1px @colorMain;
+            background: url('/assets/images/border.svg') no-repeat;
+            background-size: cover;
         }
     }
     ul {
@@ -101,7 +105,7 @@ body {
     }
     footer {
         .fontFooter();
-        margin-top: @dimBase*4.00;
+        margin-top: @dimBase*3.00;
     }
     a {
         color: @colorMain;
