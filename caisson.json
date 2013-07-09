@@ -1,0 +1,26 @@
+{
+  "root_domain": "caisson.co",
+  "redirect_domain": "www.caisson.co",
+  "s3": [
+    {
+      "bucket": "caisson.co",
+      "endpoint": "caisson.co.s3-website-us-east-1.amazonaws.com"
+    },
+    {
+      "bucket": "www.caisson.co",
+      "endpoint": "www.caisson.co.s3-website-us-east-1.amazonaws.com"
+    }
+  ],
+  "route_53": {
+    "domain_name": "caisson.co.",
+    "name_servers": [
+      "ns-174.awsdns-21.com",
+      "ns-1607.awsdns-08.co.uk",
+      "ns-1015.awsdns-62.net",
+      "ns-1293.awsdns-33.org"
+    ]
+  },
+  "cloud_front": {
+    "domain_name": "d1ac928fhtcp16.cloudfront.net"
+  }
+}
