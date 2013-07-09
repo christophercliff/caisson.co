@@ -5,7 +5,7 @@ title: Deploy your static website to AWS - Caisson
 
 ## Deploy your static website to AWS
 
-Caisson sets up [S3](http://aws.amazon.com/s3/), [Route 53](http://aws.amazon.com/route53/), and [CloudFront](http://aws.amazon.com/cloudfront/) and deploys your site in one command.
+Caisson initializes [S3](http://aws.amazon.com/s3/), [Route 53](http://aws.amazon.com/route53/), and [CloudFront](http://aws.amazon.com/cloudfront/) and deploys your site in one command.
 
 ## Installation
 
