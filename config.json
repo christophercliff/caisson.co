@@ -4,6 +4,7 @@
     "url": "http://caisson.co",
     "name": "Caisson",
     "mode": "development",
+    "cdn": "d1ac928fhtcp16.cloudfront.net",
     "assets": {
       "css": {
         "all": [
