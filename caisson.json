@@ -14,10 +14,10 @@
   "route_53": {
     "domain_name": "caisson.co.",
     "name_servers": [
-      "ns-174.awsdns-21.com",
-      "ns-1607.awsdns-08.co.uk",
-      "ns-1015.awsdns-62.net",
-      "ns-1293.awsdns-33.org"
+      "ns-1415.awsdns-48.org",
+      "ns-1608.awsdns-09.co.uk",
+      "ns-200.awsdns-25.com",
+      "ns-813.awsdns-37.net"
     ]
   },
   "cloud_front": {
