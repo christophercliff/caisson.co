@@ -52,6 +52,6 @@ $ npm install
 $ npm test
 ```
 
-## License & Copyright
+## License
 
 MIT License, see [LICENSE](https://github.com/christophercliff/caisson/blob/master/LICENSE.md) for details.
